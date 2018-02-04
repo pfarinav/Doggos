@@ -1,0 +1,8 @@
+{
+    "status": "success",
+    "message": {
+        "bulldog": ["boston", "french"],
+        "bullterrier": ["staffordshire"],
+        "cairn": []
+    }
+}

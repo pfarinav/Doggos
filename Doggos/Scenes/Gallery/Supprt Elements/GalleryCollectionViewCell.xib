@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GalleryCollectionViewCell" customModule="Doggos" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog-paw" translatesAutoresizingMaskIntoConstraints="NO" id="s2a-jk-PiW">
+                        <rect key="frame" x="20" y="20" width="260" height="260"/>
+                    </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VHO-iG-jdR">
+                        <rect key="frame" x="132" y="132" width="37" height="37"/>
+                        <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </activityIndicatorView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0w4-LF-dbG">
+                        <rect key="frame" x="147" y="286.5" width="7" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.035294117647058823" green="0.4392156862745098" blue="0.32941176470588235" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="s2a-jk-PiW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="0se-YL-w83"/>
+                <constraint firstAttribute="trailing" secondItem="s2a-jk-PiW" secondAttribute="trailing" constant="20" id="KXy-J5-tQg"/>
+                <constraint firstAttribute="bottom" secondItem="0w4-LF-dbG" secondAttribute="bottom" id="UdD-Nh-tcc"/>
+                <constraint firstAttribute="bottom" secondItem="s2a-jk-PiW" secondAttribute="bottom" constant="20" id="Xv7-Jz-AfC"/>
+                <constraint firstItem="0w4-LF-dbG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gLv-EB-ZhT"/>
+                <constraint firstItem="s2a-jk-PiW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="hzF-WA-h8a"/>
+                <constraint firstItem="VHO-iG-jdR" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="pWu-Vq-NPA"/>
+                <constraint firstItem="VHO-iG-jdR" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="xfs-ua-hPB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="362" height="254"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="5"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="imageView" destination="s2a-jk-PiW" id="EZO-mI-Jp0"/>
+                <outlet property="pageNumber" destination="0w4-LF-dbG" id="Tdr-8t-65p"/>
+                <outlet property="spinner" destination="VHO-iG-jdR" id="Nfl-Ij-BIX"/>
+            </connections>
+            <point key="canvasLocation" x="42" y="-4"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="dog-paw" width="32" height="32"/>
+    </resources>
+</document>
